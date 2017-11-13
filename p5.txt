@@ -160,20 +160,27 @@ Cuanto más grande sea la delta más grande puede ser el jitter.
 
 14. En Telephony selecciona el menú VoIP calls. Verás que se lista la llamada de voz IP capturada en una ventana emergente. Selecciona esa llamada y pulsa el botón Graph.
  ** ¿Cuánto dura la conversación?
+    24.8s
+
  ** ¿Cuáles son sus SSRC? ¿Por qué hay varios SSRCs? ¿Hay CSRCs?
 
 
 15. Identifica la trama donde se finaliza la conversación.
  ** ¿Qué método SIP se utiliza?
+    BYE
  ** ¿En qué trama(s)?
+    924,925,926,927
  ** ¿Por qué crees que se envía varias veces?
+    Porquer no recibe un ok del bye
 
 
 16. Finalmente, se cierra la aplicación de VozIP.
  ** ¿Por qué aparece una instrucción SIP del tipo REGISTER?
+    Para darte de baja en el servidor poniendo el campo expires a 0
  ** ¿En qué trama sucede esto?
+    950 y 952 ya que el primera no tiene permiso
  ** ¿En qué se diferencia con la instrucción que se utilizó con anterioridad (al principio de la sesión)?
-
+    En el campo expires
 
 
 [Al terminar el ejercicio es recomendable hacer commit de los ficheros modificados]
