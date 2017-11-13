@@ -193,25 +193,48 @@ Captura de una sesión SIP
 Captura una sesión SIP de una conversación con el número SIP sip:9999@qxip.net. Tendrás que dar de alta una cuenta en www.ekiga.net con el navegador. Recuerda también que has de comenzar a capturar tramas antes de arrancar Ekiga para ver todo el proceso en el que participa SIP. Para realizar los siguientes ejercicios, deberás crearte una cuenta en ekiga.net y darte de alta la lanzar la aplicación.
 
 17. Observa las diferencias en el inicio de la conversación entre el entorno del laboratorio y el del ejercicio anterior:
- ** ¿Es necesario el uso de DNS y STUN? ¿Por qué?
- ** ¿Son diferentes el registro y la descripción de la sesión?
+    Hecho
 
 
 18. Identifica las diferencias existentes entre esta conversación y la conversación anterior:
- ** ¿Cuántos flujos tenemos?
- ** ¿Cuál es su periodicidad?
- ** ¿Cuánto es el valor máximo del delta y los valores medios y máximo del jitter?
- ** ¿Podrías reproducir la conversación desde Wireshark? ¿Cómo? Comprueba que poniendo un valor demasiado pequeño para el buffer de jitter, la conversación puede no tener la calidad necesaria.
- ** ¿Sabrías decir qué tipo de servicio ofrece sip:9999@qxip.net?
+ demasiado pequeño para el buffer de jitter, la conversación puede no tener la calidad necesaria.
+Hecho
 
 
 
 [Al terminar el ejercicio es recomendable hacer commit de los ficheros modificados]
 
-19. Filtra por los paquetes SIP de la captura y guarda únicamente los paquetes SIP como sip.libpcap. Abre el fichero guardado para cerciorarte de que lo has hecho bien. Deberás guardarlo en un archivo de nombre p5.libpcap y añadirlo al repositorio.
+19. Observa las diferencias en el inicio de la conversación entre el entorno
+del laboratorio y el del ejercicio anterior 3 :
+• ¿Es necesario el uso de DNS y STUN? ¿Por qué?
+Sí, para resolver el dominio de la ip.
+Sí, para cuando se conecta al servidor de ekiga.
 
-[Al terminar el ejercicio es recomendable hacer commit de los ficheros modificados]
+• ¿Son diferentes el registro y la descripción de la sesión?
+El de Registrar no requiere SDP pero el de INVITE sí para que sepa el otro usuario lo que vais a intercambiar.
+20
 
-[Al terminar la práctica, realiza un push para sincronizar tu repositorio GitHub]
+20. Identifica las diferencias existentes entre esta conversación y la con-
+versación anterior:
+• ¿Cuántos flujos tenemos?
+4
+• ¿Cuál es su periodicidad?
+    320 ms 
+• ¿Cuánto es el valor máximo del delta y los valores medios y
+máximo del jitter?
+MAx=13,62
+Medio=13,12
+• ¿Podrı́as reproducir la conversación desde Wireshark? 
+sí,
+¿Cómo?
+Telepony RTP en stream Analysis
+
+Comprueba que poniendo un valor demasiado pequeño para el
+buffer de jitter, la conversación puede no tener la calidad nece-
+saria.
+
+• ¿Sabrı́as decir qué tipo de servicio ofrece sip:9999@qxip.net?
+
+
 
 [Recuerda mirar el guión para ver las instrucciones de entrega]
